@@ -48,7 +48,6 @@ class BackyardFlyer(Drone):
         if self.flight_state == States.WAYPOINT:
             current_location = self.global_position
             self.all_waypoints = self.calculate_box() 
-            
             if current_location[0] == self.global_home[0] and current_location[1] == self.global_home[1] and current_location[2] == self.global_home[2]:
                 self.landing_transition()
             else:
